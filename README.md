@@ -1,5 +1,4 @@
-[![CI](https://github.com/meysamhadeli/shop-golang-microservices/actions/workflows/ci.yml/badge.svg?branch=main&style=flat-square)](https://github.com/meysamhadeli/shop-golang-microservices/actions/workflows/ci.yml)
-![Go Version](https://img.shields.io/badge/go%20version-%3E=1.21-61CFDD.svg?style=flat-square)
+
 # 📍 Shop Golang Microservices
 
 > **A practical and imaginary microservices for implementing an infrastructure for up and running distributed system with the latest technology and architecture like Vertical Slice Architecture, Event Driven Architecture, CQRS, Postgres, RabbitMq in Golang.** 🚀
@@ -8,44 +7,7 @@
 
 <a href="https://gitpod.io/#https://github.com/meysamhadeli/shop-golang-microservices"><img alt="Open in Gitpod" src="https://gitpod.io/button/open-in-gitpod.svg"/></a>
 
-# Table of Contents
 
-- [The Goals of This Project](#the-goals-of-this-project)
-- [Plan](#plan)
-- [Technologies - Libraries](#technologies---libraries)
-- [The Domain and Bounded Context - Service Boundary](#the-domain-and-bounded-context---service-boundary)
-- [Structure of Project](#structure-of-project)
-- [How to Run](#how-to-run)
-    - [Docker-Compose](#docker-compose)
-    - [Build](#build)
-    - [Run](#run)
-    - [Test](#test)
-- [Documentation Apis](#documentation-apis)  
-- [Support](#support)
-- [Contribution](#contribution)
-
-## The Goals of This Project
-
-- :sparkle: Using `Vertical Slice Architecture` for `architecture level`.
-- :sparkle: Using `Rabbitmq` for `Event Driven Architecture` between our microservices with `streadway/amqp` library.
-- :sparkle: Using `gRPC` for `internal communication` between our microservices with `grpc/grpc-go` library.
-- :sparkle: Using `CQRS` implementation with `mehdihadeli/Go-MediatR` library.
-- :sparkle: Using `Postgres` for `database` in our microservices with `go-gorm/gorm` library.
-- :sparkle: Using `go-playground/validator` for `validating input` data in the REST calls.
-- :sparkle: Using `OpenTelemetry` for `distributed tracing` top of `Jaeger`.
-- :sparkle: Using `OAuth2` for implementation `authentication` and `authorization` with `go-oauth2/oauth2` library.
-- :sparkle: Using `Echo framework` for `RESTFul api`.
-- :sparkle: Using `Swagger` with `swaggo/swag` library for api documentation.
-- :sparkle: Using `uber-go/fx` library for `dependency injection`.
-- :sparkle: Using `Viper` for `configuration management`.
-- :sparkle: Using `logrus` as a `structured logger`.
-- :sparkle: Using `Unit Testing`,`Integration Testing` and `End To End Testing` for testing level.
-- :sparkle: Using `Docker-Compose` for our `deployment` mechanism.
-- :construction: Using `OpenTelemetry` for `monitoring` top of `Prometteuse` and `Grafana`
-- :construction: Using `MongoDB` for read side with `mongo-driver`.
-- :construction: Using `Domain Driven Design` (DDD) to implement all `business` processes in microservices.
-- :construction: Using `Inbox Pattern` for ensuring message idempotency for receiver and `Exactly once Delivery`.
-- :construction: Using `Outbox Pattern` for ensuring no message is lost and there is at `At Least One Delivery`.
   
 ## Plan
 
@@ -53,28 +15,7 @@
 
 I will try to register future goals and additions in the [Issues](https://github.com/meysamhadeli/shop-golang-microservices/issues) section of this repository.
 
-## Technologies - Libraries
 
-- ✔️ **[`labstack/echo`](https://github.com/labstack/echo)** - High performance, minimalist Go web framework
-- ✔️ **[`go-gorm/gorm`](https://github.com/go-gorm/gorm)** - The fantastic ORM library for Go, aims to be developer friendly
-- ✔️ **[`sirupsen/logrus`](https://github.com/sirupsen/logrus)** - Logrus is a structured logger for Go
-- ✔️ **[`streadway/amqp`](https://github.com/streadway/amqp)** - Go RabbitMQ Client Library
-- ✔️ **[`spf13/viper`](https://github.com/spf13/viper)** - Go configuration with fangs
-- ✔️ **[`swaggo/echo-swagger`](https://github.com/swaggo/echo-swagger)** - Echo middleware to automatically generate RESTful API documentation
-- ✔️ **[`mehdihadeli/Go-MediatR`](https://github.com/mehdihadeli/Go-MediatR)** - This package is a Mediator Pattern implementation in Go
-- ✔️ **[`go-playground/validator`](https://github.com/go-playground/validator)** - Implements value validations for structs and individual fields based on tags
-- ✔️ **[`open-telemetry/opentelemetry-go`](https://github.com/open-telemetry/opentelemetry-go)** - Implementation of OpenTelemetry in Go for distributed-tracing
-- ✔️ **[`meysamhadeli/problem-details`](https://github.com/meysamhadeli/problem-details)** - Error Handler for mapping our error to standardized error payload to client
-- ✔️ **[`go-resty/resty`](https://github.com/go-resty/resty)** - Simple HTTP and REST client library for Go (inspired by Ruby rest-client)
-- ✔️ **[`grpc/grpc-go`](https://github.com/grpc/grpc-go)** - The Go language implementation of gRPC. HTTP/2 based RPC
-- ✔️ **[`go-oauth2/oauth2`](https://github.com/go-oauth2/oauth2)** - An open protocol to allow secure authorization in a simple and standard method
-- ✔️ **[`stretchr/testify`](https://github.com/stretchr/testify)** - A toolkit with common assertions and mocks that plays nicely with the standard library
-- ✔️ **[`uber-go/fx`](https://github.com/uber-go/fx)** - Fx is a dependency injection system for Go
-- ✔️ **[`cenkalti/backoff`](https://github.com/cenkalti/backoff)** - This is a Go port of the exponential backoff algorithm
-- ✔️ **[`stretchr/testify`](https://github.com/stretchr/testify)** - A toolkit with common assertions and mocks that plays nicely with the standard library
-- ✔️ **[`testcontainers/testcontainers-go`](https://github.com/testcontainers/testcontainers-go)** - it's a package to create and clean up container for automated integration/smoke tests
-- ✔️ **[`avast/retry-go`](https://github.com/avast/retry-go)** - Simple golang library for retry mechanism
-- ✔️ **[`ahmetb/go-linq`](https://github.com/ahmetb/go-linq)** - .NET LINQ capabilities in Go
 
 ## The Domain And Bounded Context - Service Boundary
 
@@ -157,27 +98,3 @@ go install github.com/swaggo/swag/cmd/swag@v1.8.3
 As part of API testing, I created the [shop.rest](./shop.rest) file which can be run with the [REST Client](https://github.com/Huachao/vscode-restclient) `VSCode plugin`.
 
 
-# Support
-
-If you like my work, feel free to:
-
-- ⭐ this repository. And we will be happy together :)
-
-Thanks a bunch for supporting me!
-
-## Contribution
-
-Thanks to all [contributors](https://github.com/meysamhadeli/shop-golang-microservices/graphs/contributors), you're awesome and this wouldn't be possible without you! The goal is to build a categorized community-driven collection of very well-known resources.
-
-Please follow this [contribution guideline](./CONTRIBUTION.md) to submit a pull request or create the issue.
-
-## Project References & Credits
-
-- [https://github.com/golang-standards/project-layout](https://github.com/golang-standards/project-layout)
-- [https://github.com/AleksK1NG/Go-Elasticsearch-RabbitMQ](https://github.com/AleksK1NG/Go-Elasticsearch-RabbitMQ)
-- [https://github.com/ThreeDotsLabs/wild-workouts-go-ddd-example](https://github.com/ThreeDotsLabs/wild-workouts-go-ddd-example)
-- [https://github.com/kgrzybek/modular-monolith-with-ddd](https://github.com/kgrzybek/modular-monolith-with-ddd)
-- [https://github.com/jbogard/ContosoUniversityDotNetCore-Pages](https://github.com/jbogard/ContosoUniversityDotNetCore-Pages)
-
-## License
-This project is made available under the MIT license. See [LICENSE](https://github.com/meysamhadeli/shop-golang-microservices/blob/main/LICENSE) for details.
